@@ -1,0 +1,763 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+@import "https://fonts.googleapis.com/css?family=Exo+2:400,700";
+
+@import "https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css";
+
+html,body {
+     width: 100%;
+     height: 100%;
+     position: relative; 
+}
+ 
+ html > * {
+     font-family: 'Exo 2', sans-serif;
+ }
+ 
+:root {
+    --color-bluelight: #2DE1B2;
+    --color-yellow: #FAB735;
+}
+
+ #app {
+     background-color: #000F23;
+ }
+ 
+ .btn-blue {
+     @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+ }
+ .btn-blue:hover {
+     @apply bg-blue-900;
+ }
+  
+  
+ .contenido {
+     /* overflow-y: auto; */
+     height: auto;
+     margin-top: 72px;
+ }
+ body {
+     overflow-x: hidden;
+ }
+ 
+ .bold {
+     font-weight: 700;
+ }
+ 
+ @media(min-width: 800px) {
+     body {
+         overflow: hidden;
+     }
+     .contenido {
+         overflow-y: hidden;
+         height: calc(100vh - 70px);
+         margin-top: 70px;
+     }
+ }
+ 
+ .cookies .contenido {
+   margin-top: 135px;
+  }
+ 
+ .bg-primary {
+     background-color: #000F23;
+ }
+ 
+  .text-yellow {
+     color: #E8B800;
+ }
+ 
+ .text-blue {
+   color: #26354a;
+ }
+ 
+ .text-bluelight {
+   color: var(--color-bluelight);
+ }
+ 
+ .text-uppercase {
+   text-transform: uppercase;
+ }
+ 
+  .item-header {
+      color: #969696;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.5s ease;
+      @apply px-4 py-6 mx-4 cursor-pointer z-10 relative;
+  }
+  .item-header.router-link-exact-active::after,
+  .item-header:hover::after {
+     content: '';
+     position: absolute;
+     width: 30%;
+     height: 100%;
+     bottom: 0;
+     left: 50%;
+     transition: all 0.5s ease;
+     transform: translateX(-50%);
+     border-bottom: 2px solid #E8B800;
+  }
+ 
+  .item-header:hover,
+  .item-header.router-link-exact-active {
+      color: #E8B800;
+  }
+ 
+  .bg-custom-black {
+     position: fixed;
+     width: 50%;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     z-index: 0;
+     background-color: #000F23;
+  }
+ 
+  .bg-custom-grey {
+     position: fixed;
+     width: 50%;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     z-index: 0;
+     background-color: #edeff0;
+  }
+ 
+  .btn-yellow {
+      background-color: #e8b800;
+      color: #222121;
+      text-decoration: none;
+  }
+  .btn-yellow-hover {
+     transition: background .5s ease-out;
+  }
+  .btn-yellow-hover:hover {
+     background: linear-gradient(to bottom, rgb(243, 230, 90), rgb(251, 206, 26));;
+   }
+ 
+  .btn-border-white {
+   position: relative;
+   min-width: 140px;
+   display: inline-block;
+   /* margin-top: 20px; */
+   text-align: center;
+   padding: 1rem 1.25rem;
+   color: #edeff0;
+   text-decoration: none;
+   border: 1px solid #969696;
+  }
+ .btn-border-white::before {
+     content: "";
+     position: absolute;
+     bottom: -2px;
+     left: 5%;
+     width: 20%;
+     height: 2px;
+     background-color: #dfdfdf;
+   }
+ 
+   .btn-border-white::after {
+     content: "";
+     position: absolute;
+     top: -2px;
+     right: 5%;
+     width: 20%;
+     height: 2px;
+     background-color: #dfdfdf;
+   }
+ 
+  .btn-yellow-degree {
+     background: linear-gradient(to bottom, #F0E03B, #E8BC06);;
+     color: #222121;
+     text-decoration: none;
+ }
+ 
+  .btn-transparent {
+      background-color: transparent;
+      color: #222121;
+      text-decoration: none;
+  }
+ 
+  .btn-violeta {
+     background-color: #350079;
+     color: #fff;
+     text-decoration: none;
+  }
+ 
+ .btn-inscripcion {
+     font-size: 0.8rem;
+     /* padding: 1.8rem 2rem; */
+     min-width: 232px;
+     min-height: 70px;
+     display: block;
+     text-align: center;
+ }
+ 
+ .btn-inscripcion > span {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+ }
+ 
+ #app {
+     /* overflow: hidden; */
+ }
+  /* Menu superior mobile */
+ 
+ 
+ 
+ 
+ 
+  /*******  FONT SIZES  *******/ 
+  .fs8 { font-size: 0.8rem;}
+  .fs9 { font-size: 0.9rem;}
+  .fs10 { font-size: 1rem;}
+  .fs11 { font-size: 1.1rem;}
+  .fs12 { font-size: 1.2rem;}
+  .fs13 { font-size: 1.3rem;}
+  .fs14 { font-size: 1.4rem;}
+  .fs15 { font-size: 1.5rem;}
+  .fs17 { font-size: 1.7rem;}
+  .fs18 { font-size: 1.8rem;}
+  .fs20 { font-size: 2rem;}
+ 
+ 
+  /******  INPUTS  ******/
+ 
+  label.label {
+     @apply flex text-gray-800; 
+  }
+ 
+  .wrapper-input {
+     @apply flex items-center border-b border-gray-800 py-1;
+  }
+ 
+  .wrapper-input > input {
+      outline: 0;
+      color: #edf4ff;
+     @apply text-sm appearance-none bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight;
+  }
+ 
+  input.input {
+     outline: 0;
+     color: #edf4ff;
+     @apply text-sm appearance-none bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight;
+  }
+ 
+  input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+ }
+  
+ input[type="number"] {
+     -moz-appearance: textfield;
+ }
+ 
+  /******* ANIMATIONS *******/
+  @keyframes float {
+     0% {
+         /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+         transform: translatey(0px);
+     }
+     50% {
+         /* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
+         transform: translatey(-15px);
+     }
+     100% {
+         /* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */
+         transform: translatey(0px);
+     }
+ }
+ 
+ @keyframes going {
+     from {
+       transform: translateY(0);
+     }
+     to {
+       transform: translateY(-100px);
+       opacity: 0;
+     }
+   }
+   @keyframes coming {
+     from {
+       transform: translateY(-100px);
+       opacity: 0;
+     }
+     to {
+       transform: translateY(0);
+       opacity: 1;
+     }
+   }
+ 
+   @keyframes slideInDown {
+     from {
+       -webkit-transform: translate3d(0, -100%, 0);
+       transform: translate3d(0, -100%, 0);
+       visibility: visible;
+     }
+   
+     to {
+       -webkit-transform: translate3d(0, 0, 0);
+       transform: translate3d(0, 0, 0);
+     }
+   }
+ 
+   @keyframes slideOutDown {
+     from {
+       -webkit-transform: translate3d(0, 0, 0);
+       transform: translate3d(0, 0, 0);
+     }
+   
+     to {
+       visibility: hidden;
+       -webkit-transform: translate3d(0, 100%, 0);
+       transform: translate3d(0, 100%, 0);
+     }
+   }
+ 
+   @keyframes drop {
+     from {
+       /* position: fixed; */
+       /* right: 3%; */
+       transform: scaleY(1);
+       /* transform-origin:  bottom 100%; */
+       opacity: 1;
+     }
+     /* 50% {
+         transform: scale(1.5);
+         opacity: 0.5;
+     } */
+     to {
+       transform: scale(2);
+       opacity: 0.05;
+     }
+   }
+ 
+  
+  /******* SCROLL BAR *******/
+ 
+ /* width */
+ ::-webkit-scrollbar {
+   width: 5px;
+ }
+ 
+ /* Track */
+ ::-webkit-scrollbar-track {
+   background: #350079; 
+ }
+  
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: rgb(228, 228, 228); 
+ }
+ 
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+   background: rgb(194, 194, 194); 
+ }
+ 
+ 
+ .VueCarousel-pagination {
+     display: none;
+ }
+ 
+ /*  HOME SLIDER */
+ .home-slider .VueCarousel{
+   height: 100vh;
+   position: relative;
+ }
+ 
+ 
+ .home-slider .VueCarousel-inner {
+   transition: transform 10ms ease !important;
+ }
+ 
+ .home-slider .VueCarousel-slide {
+   opacity: 0 !important;
+   /* flex-basis: 0; */
+ }
+ 
+ .home-slider .VueCarousel-slide-active {
+   transition: all 0.9s !important;
+   opacity: 1 !important;
+ }
+ 
+ 
+ .home-slider .VueCarousel-wrapper {
+   height: 100vh;
+ }
+ 
+ .home-slider .VueCarousel-pagination {
+   position: absolute;
+   display: block;
+   bottom: 25px;   
+ }
+ .home-slider .VueCarousel-pagination .VueCarousel-dot, 
+ .plans-slider .VueCarousel-pagination .VueCarousel-dot {
+   background-color: #787b81 !important;
+ }
+ .home-slider .VueCarousel-pagination .VueCarousel-dot--active,
+ .plans-slider .VueCarousel-pagination .VueCarousel-dot--active {
+   background-color: var(--color-bluelight) !important;
+ }
+ 
+ 
+ .home-slider .VueCarousel-navigation,
+ .plans-slider .VueCarousel-navigation {
+   display: none;   
+ }
+ 
+ /****************** PLANS SLIDER  *******************/
+ .plans-slider .VueCarousel-pagination {
+   /* position: absolute; */
+   display: block;
+   /* bottom: -10px;    */
+ }
+ 
+ /****************** FIVO SLIDER *******************/
+ .fivo-slider .VueCarousel-navigation img.img-chevron {
+     max-width: 23px;
+     border: 1px solid #fafafa;
+     padding: 5px; 
+ }
+ 
+.fivo-slider .VueCarousel-pagination {
+    display: none !important;
+}
+
+.fivo-slider .VueCarousel-navigation {
+     position: absolute;
+     width: auto;
+     height: auto;
+     top: -70px;
+     right: 0px;
+     transform: none !important;
+     display: flex;
+     flex-wrap: wrap;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+   }
+   @media(max-width: 800px) {
+     .fivo-slider .VueCarousel-navigation {
+       top: -145px;
+       right: 26px;
+     }
+   }
+ 
+ .fivo-slider .VueCarousel-navigation-button {
+     position: relative !important;
+     top: auto !important;
+     left: auto !important;
+     transform: none !important;
+     margin-right: 0 !important;
+     -webkit-appearance: none;
+ }
+ 
+ .fivo-slider .VueCarousel-navigation-button:focus {
+   outline: none !important;
+ }
+ 
+ .fivo-slider .VueCarousel-navigation-prev {
+     position: relative;
+     /* margin: 10px 0; */ 
+ }
+ /******** FAQS Slider ********/
+ .faqs-slider .VueCarousel-navigation-button {
+   position: relative !important;
+   top: auto !important;
+   left: auto !important;
+   transform: none !important;
+   margin-right: 0 !important;
+   -webkit-appearance: none;
+ }
+ 
+ .faqs-slider .VueCarousel-navigation-button:focus,
+ .fivo-slider .VueCarousel-navigation-button:focus,
+ .objetivos-slider .VueCarousel-navigation-button:focus,
+ .instalaciones-slider .VueCarousel-navigation-button:focus {
+   outline: none !important;
+ }
+ 
+ .faqs-slider .VueCarousel-navigation {
+   position: absolute;
+   width: auto;
+   height: auto;
+   top: -60px;
+   right: 0px;
+   transform: none !important;
+   display: flex;
+   flex-wrap: wrap;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+ }
+ @media(max-width: 800px) {
+   .faqs-slider .VueCarousel-navigation {
+     top: -55px;
+     right: -8px;
+   }
+ }
+ 
+ .faqs-slider .VueCarousel-navigation img.img-chevron {
+   max-width: 23px;
+   border: 1px solid #fafafa;
+   padding: 5px; 
+ }
+ 
+ /******** Objetivos Slider - ENTRETENIMIENTO PAGE *********/
+ .objetivos-slider .VueCarousel-navigation img.img-chevron,
+ .instalaciones-slider .VueCarousel-navigation img.img-chevron {
+     max-width: 25px;
+     border: 1px solid #fafafa;
+     padding: 5px; 
+ }
+ 
+ .objetivos-slider .VueCarousel-navigation {
+     position: fixed;
+     width: auto !important;
+     height: auto;
+     /* top: auto !important; */
+     left: 50% !important;
+     bottom: 0 !important;
+     transform: translateX(-50%);
+ }
+ 
+ @media(max-width: 800px) {
+     /* .objetivos-slider .VueCarousel-navigation {
+         position: relative !important;
+         margin-right: 2rem;
+     } */
+ }
+ 
+ .objetivos-slider .VueCarousel-navigation-button {
+     position: relative !important;
+     top: auto !important;
+     left: auto !important;
+     transform: none !important;
+     margin-right: 0 !important;
+ }
+ 
+ .objetivos-slider .VueCarousel-navigation-prev {
+     position: relative;
+     /* margin: 10px 0; */ 
+ }
+ 
+ /*  INSTALACIONES SLIDER  */
+ .instalaciones-slider .VueCarousel-wrapper {
+   transform: translateX(24%);
+   overflow: visible ;
+ }
+ 
+ .instalaciones-slider .VueCarousel-navigation-button {
+   position: relative !important;
+   top: auto !important;
+   left: auto !important;
+   transform: none !important;
+   margin-right: 0 !important;
+ }
+ 
+ .instalaciones-slider .VueCarousel-navigation-prev {
+   position: relative;
+   /* margin: 10px 0; */ 
+ }
+ 
+ .instalaciones-slider .VueCarousel-navigation {
+     position: fixed;
+     width: auto !important;
+     height: auto;
+     left: 50% !important;
+     bottom: 0 !important;
+     transform: translateX(-100%);
+ }
+ @media(max-width: 550px) {
+   .instalaciones-slider .VueCarousel-navigation {
+     position: fixed;
+     width: auto !important;
+     height: auto;
+     /* top: auto !important; */
+     left: 50% !important;
+     bottom: 0 !important;
+     transform: translateX(-50%);
+   }  
+   .instalaciones-slider .VueCarousel-wrapper {
+     transform: translateX(0%);
+     overflow: visible ;
+   }
+ 
+ }
+ 
+ /***********************/
+ /*******  TABLE *******/
+ /***********************/
+ .table thead th {
+     padding: 0.7rem 1rem;
+     font-weight: 400;
+ }
+ 
+ .table tbody tr {
+     border-bottom: 1px solid #cacaca;
+ }
+ 
+ .table tbody tr td {
+     padding: 0.7rem 1rem;
+     font-weight: 400;
+ }
+ 
+ /******* CHECKBOXES *******/
+ .checkbox-w {
+     /* display: block; */
+     position: relative;
+     padding-left: 35px;
+     margin-bottom: 12px;
+     cursor: pointer;
+     font-size: 15px;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+   }
+   
+   /* Hide the browser's default checkbox */
+   .checkbox-w input {
+     position: absolute;
+     opacity: 0;
+     cursor: pointer;
+     height: 0;
+     width: 0;
+   }
+   
+   /* Create a custom checkbox */
+   .checkmark {
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 18px;
+     width: 18px;
+     border-radius: 50%;
+     background-color: #eee;
+   }
+   
+   /* On mouse-over, add a grey background color */
+   .checkbox-w:hover input ~ .checkmark {
+     background-color: #ccc;
+   }
+   
+   /* When the checkbox is checked, add a blue background */
+   .checkbox-w input:checked ~ .checkmark {
+     background-color: #60eeb6;
+   }
+   
+   /* Create the checkmark/indicator (hidden when not checked) */
+   .checkmark:after {
+     content: "";
+     position: absolute;
+     display: none;
+   }
+   
+   /* Show the checkmark when checked */
+   .checkbox-w input:checked ~ .checkmark:after {
+     display: block;
+   }
+   
+   /* Style the checkmark/indicator */
+   .checkbox-w .checkmark:after {
+     left: 5px;
+     top: 5px;
+     width: 8px;
+     height: 8px;
+     background: #00071D;
+     border-radius: 50%;
+   }
+ 
+   /* Checkbox filter categories */
+   .pretty input:checked~.state.p-info label:after, .pretty.p-toggle .state.p-info label:after {
+     background-color: #2DE1B2;
+   }
+ 
+   .pretty input:checked~.state.p-custom-o label:before, 
+   .pretty.p-toggle .state.p-custom-o label:before {
+     border-color: #2DE1B2;
+   }
+ 
+   .pretty.p-default:not(.p-fill) input:checked~.state.p-custom-o label:after {
+     background-color: #2DE1B2 !important; 
+   }
+ 
+ 
+   /************ CALENDAR ************/
+   .vdpFloating .vdpInnerWrap {
+     position: fixed !important;
+   }
+ 
+   .vdpComponent.vdpWithInput > input {
+     font-size: .8rem !important;
+     padding-right: 5px !important;
+     width: 80% !important;
+     background: transparent;
+   }
+ 
+   .vdpCell.selected .vdpCellContent,
+   .vdpCell.selectable:hover .vdpCellContent {
+     background: var(--color-yellow) !important;
+     color: #00071D !important;
+   }
+
+
+/** HAMBURGUER **/
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block;
+}
+
+.hamburger-inner::before {
+    top: -10px;
+}
+
+.hamburger-inner::after {
+    bottom: -10px;
+}
+
+.btn-hamburguer .hamburger-inner.bg-white-hamb,
+.btn-hamburguer .hamburger-inner.bg-white-hamb::before,
+.btn-hamburguer .hamburger-inner.bg-white-hamb::after {
+  background-color: white;
+}
+.btn-hamburguer .hamburger-inner.bg-black-hamb,
+.btn-hamburguer .hamburger-inner.bg-black-hamb::before,
+.btn-hamburguer .hamburger-inner.bg-black-hamb::after {
+  background-color: #000f23;
+}
+
+.btn-hamburguer .hamburger-inner {
+    width: 27px;
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+
+.hamburger-inner, 
+.hamburger-inner::before, 
+.hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
